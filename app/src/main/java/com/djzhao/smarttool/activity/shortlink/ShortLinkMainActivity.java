@@ -1,7 +1,7 @@
 package com.djzhao.smarttool.activity.shortlink;
 
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
+import com.google.android.material.snackbar.Snackbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;

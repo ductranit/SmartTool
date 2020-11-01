@@ -1,11 +1,9 @@
 package com.djzhao.smarttool.activity.ruler;
 
-import android.annotation.SuppressLint;
 import android.graphics.Point;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.BoringLayout;
 import android.util.DisplayMetrics;
 import android.view.Window;
 import android.view.WindowManager;

@@ -1,8 +1,8 @@
 package com.djzhao.smarttool.activity.chooseproblem;
 
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.support.design.widget.Snackbar;
+
+import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
