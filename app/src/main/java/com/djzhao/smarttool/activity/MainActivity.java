@@ -70,17 +70,14 @@ public class MainActivity extends BaseActivity {
 
     //定义图标数组
     private int[] imageRes = {
-            R.drawable.dashboard_weather,
             R.drawable.dashboard_torch,
             R.drawable.dashboard_tanscoding,
             R.drawable.dashboard_morse_code,
             R.drawable.dashboard_ruler,
-            R.drawable.dashboard_hyperlink,
             R.drawable.dashboard_html,
             R.drawable.dashboard_random,
             R.drawable.dashboard_binary,
             R.drawable.dashboard_visit_card,
-            R.drawable.dashboard_github,
             R.drawable.dashboard_choose
     };
 
@@ -103,6 +100,16 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
         dailyWord.setText(R.string.daily_word_hint);
         // dailyWordAuthor.setText(" —— ONE一个");
+
+        String locale;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+            locale = getResources().getConfiguration().getLocales().get(0).getLanguage();
+        } else{
+            //noinspection deprecation
+            locale = getResources().getConfiguration().locale.getLanguage();
+        }
+
+        dailyWord.setVisibility("cn".equalsIgnoreCase(locale)? View.VISIBLE : View.GONE);
 
         gridViewEvent();
         navigationViewEvent();
@@ -147,6 +154,9 @@ public class MainActivity extends BaseActivity {
                     text = str.substring(str.lastIndexOf("\">") + 2, str.lastIndexOf("</a>"));
                     edit.putString("daily_word", text);
                 }
+
+
+
                 final String finalText = text;
                 final String finalImgUrl = imgUrl;
                 runOnUiThread(new Runnable() {
@@ -155,6 +165,7 @@ public class MainActivity extends BaseActivity {
                         if (finalText != null) {
                             dailyWord.setText(finalText);
                         }
+
                         if (finalImgUrl != null) {
                             Glide
                                     .with(mContext)
@@ -227,17 +238,14 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         names = new String[]{
-                getString(R.string.weather),
                 getString(R.string.flash_light),
                 getString(R.string.encode_decode),
                 getString(R.string.morse_code),
                 getString(R.string.ruler),
-                getString(R.string.short_url_generation),
                 getString(R.string.get_web_source_code),
                 getString(R.string.random_number_generation),
                 getString(R.string.base_conversion),
                 getString(R.string.business_card_qr_code),
-                getString(R.string.github_file_address_resolution),
                 getString(R.string.difficulty_in_choice)
         };
 
@@ -285,40 +293,31 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void run() {
                         switch (position) {
-                            case 0: // 天气
-                                openActivity(com.djzhao.smarttool.activity.weather.MainActivity.class);
-                                break;
-                            case 1: // 手电
+                            case 0: // 手电
                                 openActivity(com.djzhao.smarttool.activity.torch.MainActivity.class);
                                 break;
-                            case 2: // 转码
+                            case 1: // 转码
                                 openActivity(TranscodingActivity.class);
                                 break;
-                            case 3: // 摩斯码
+                            case 2: // 摩斯码
                                 openActivity(MorseCodeActivity.class);
                                 break;
-                            case 4: // 直尺
+                            case 3: // 直尺
                                 openActivity(RulerMainActivity.class);
                                 break;
-                            case 5: // 短网址
-                                openActivity(ShortLinkMainActivity.class);
-                                break;
-                            case 6: // 获取html源码
+                            case 4: // 获取html源码
                                 openActivity(HtmlGetMainActivity.class);
                                 break;
-                            case 7: // 随机数
+                            case 5: // 随机数
                                 openActivity(RandomNumberMainActivity.class);
                                 break;
-                            case 8: // 进制转换
+                            case 6: // 进制转换
                                 openActivity(RadixMainActivity.class);
                                 break;
-                            case 9: // 名片/二维码
+                            case 7: // 名片/二维码
                                 openActivity(QRCodeVisitingCardMainActivity.class);
                                 break;
-                            case 10: // GitHub文件下载地址解析
-                                openActivity(GithubAddressMainActivity.class);
-                                break;
-                            case 11: // 选择困难症
+                            case 8: // 选择困难症
                                 openActivity(ChooseProblemMainActivity.class);
                                 break;
                         }
