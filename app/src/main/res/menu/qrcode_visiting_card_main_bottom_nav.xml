@@ -4,10 +4,10 @@
     <item
         android:id="@+id/qrcode_visiting_card_bottom_nav_card"
         android:icon="@drawable/ic_visiting_card"
-        android:title="名片" />
+        android:title="@string/business_card" />
     <item
         android:id="@+id/qrcode_visiting_card_bottom_nav_diy"
         android:icon="@drawable/ic_diy_textarea"
-        android:title="自定义二维码" />
+        android:title="@string/custom_qr_code" />
 
 </menu>

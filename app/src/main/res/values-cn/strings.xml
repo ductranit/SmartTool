@@ -122,4 +122,6 @@
     <string name="random_number">随机数</string>
     <string name="transcoding">↓ 转码</string>
     <string name="decoding">↑ 解码</string>
+    <string name="business_card">名片</string>
+    <string name="custom_qr_code">自定义二维码</string>
 </resources>

@@ -122,4 +122,6 @@
     <string name="random_number">Random number</string>
     <string name="transcoding">↓ Transcoding</string>
     <string name="decoding">↑ Decoding</string>
+    <string name="business_card">Business card</string>
+    <string name="custom_qr_code">Custom QR code</string>
 </resources>
