@@ -34,7 +34,7 @@ public class QRCodeVisitingCardMainActivity extends BaseActivity implements View
 
     @Override
     protected void initView() {
-        title.setText("名片/二维码");
+        title.setText(R.string.business_card_qr_code);
         backBtn.setOnClickListener(this);
         initPageViewer();
     }
@@ -67,7 +67,7 @@ public class QRCodeVisitingCardMainActivity extends BaseActivity implements View
         switch (requestCode) {
             case 1:
                 if (grantResults.length > 0 && grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    DisplayToast("没有授权您无法使用该项功能");
+                    DisplayToast(getString(R.string.you_can_not_use_this_feature_without_authorization));
                     finish();
                 }
         }

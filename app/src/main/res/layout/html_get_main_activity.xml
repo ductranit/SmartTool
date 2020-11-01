@@ -40,9 +40,9 @@
                             android:id="@+id/html_get_input"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="输入网址"
+                            android:hint="@string/enter_url"
                             android:singleLine="true"
-                            android:text="http://" />
+                            android:text="@string/http" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
-                    android:text="清空" />
+                    android:text="@string/empty" />
             </LinearLayout>
 
             <Button
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/blue_primary"
-                android:text="去获取"
+                android:text="@string/get"
                 android:textColor="@color/white" />
 
         </LinearLayout>

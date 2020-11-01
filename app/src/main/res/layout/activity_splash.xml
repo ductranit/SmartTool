@@ -46,14 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/intro_cn"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/intro_en"
+                    android:text="@string/intro"
                     android:textColor="@color/white" />
 
             </LinearLayout>

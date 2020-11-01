@@ -37,7 +37,7 @@ public class HtmlGetMainActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     protected void initView() {
-        title.setText("网页源码获取");
+        title.setText(R.string.web_source_code_acquisition);
         backBtn.setOnClickListener(this);
         getHtmlBtn.setOnClickListener(this);
         clearInputBtn.setOnClickListener(this);
@@ -63,7 +63,7 @@ public class HtmlGetMainActivity extends BaseActivity implements View.OnClickLis
                 getHtml();
                 break;
             case R.id.html_get_clear_input:
-                inputTxt.setText("http://");
+                inputTxt.setText(R.string.http);
                 break;
         }
     }
@@ -71,14 +71,14 @@ public class HtmlGetMainActivity extends BaseActivity implements View.OnClickLis
     public void getHtml() {
         final String input = inputTxt.getText().toString().trim();
         if (TextUtils.isEmpty(input)) {
-            Snackbar.make(inputTxt, "请先输入网址", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(inputTxt, R.string.please_enter_url_first, Snackbar.LENGTH_LONG).show();
             return;
         }
         if (input.length() < 8) {
-            Snackbar.make(inputTxt, "需要输入协议+网址", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(inputTxt, R.string.need_to_enter_protocol_and_url, Snackbar.LENGTH_LONG).show();
             return;
         }
-        showProgressDialog("获取源码中，请等待...");
+        showProgressDialog(getString(R.string.obtain_the_source_code_please_wait));
         HttpUtil.sendOkHttpRequest(input, new Callback() {
             @Override
 public void onResponse(Call call, Response response) throws IOException {
@@ -100,7 +100,7 @@ public void onResponse(Call call, Response response) throws IOException {
                     @Override
                     public void run() {
                         closeProgressDialog();
-                        Snackbar.make(inputTxt, "出了点问题，无法获取源码", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(inputTxt, R.string.something_went_wrong, Snackbar.LENGTH_LONG).show();
                     }
                 });
             }

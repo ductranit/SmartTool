@@ -82,12 +82,12 @@ public class AboutActivity extends BaseActivity implements View.OnClickListener 
                 break;
             case R.id.about_mail_me:
                 intent.setAction(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:" + Constants.EMAIL_ADDRESS));
-                intent.putExtra(Intent.EXTRA_SUBJECT, "关于 一个工具箱");
+                intent.setData(Uri.parse("mailto:" + getString(R.string.sample_email)));
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.about_toolbox));
                 try {
                     startActivity(intent);
                 } catch (Exception e) {
-                    Snackbar.make(mailMe, "没有邮件程序", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mailMe, R.string.no_email_program, Snackbar.LENGTH_LONG).show();
                 }
                 break;
         }

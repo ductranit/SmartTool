@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/dashboard_intro_en"
         android:gravity="center"
-        android:text="@string/intro_cn"
+        android:text="@string/intro"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -28,7 +28,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="60dp"
         android:gravity="center"
-        android:text="@string/intro_en"
+        android:text="@string/intro"
+        android:visibility="invisible"
         android:textColor="@color/grey"
         android:textSize="18sp"
         android:textStyle="bold" />

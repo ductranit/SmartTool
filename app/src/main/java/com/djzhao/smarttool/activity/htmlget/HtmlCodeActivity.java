@@ -43,7 +43,7 @@ public class HtmlCodeActivity extends BaseActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.html_get_code_copy_fab:
                 ClipboardUtil.copyToClipboard(result);
-                Snackbar.make(resultTxt, "源码已经复制到剪贴板", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(resultTxt, R.string.the_source_code_has_been_copied_to_the_clipboard, Snackbar.LENGTH_LONG).show();
                 break;
         }
     }

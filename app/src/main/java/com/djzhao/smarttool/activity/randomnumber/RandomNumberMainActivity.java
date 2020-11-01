@@ -32,7 +32,7 @@ public class RandomNumberMainActivity extends BaseActivity implements View.OnCli
 
     @Override
     protected void initView() {
-        title.setText("随机数");
+        title.setText(R.string.random_number);
         backBtn.setOnClickListener(this);
         createRandomNumBtn.setOnClickListener(this);
     }
@@ -67,7 +67,7 @@ public class RandomNumberMainActivity extends BaseActivity implements View.OnCli
         int min = Integer.parseInt(minInput.getText().toString().trim());
         int max = Integer.parseInt(maxInput.getText().toString().trim());
         if (min > max) {
-            Snackbar.make(maxInput, "最小值似乎比最大值还要大", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(maxInput, R.string.this_minumim_seems_to_be_larger_than_maximum, Snackbar.LENGTH_LONG).show();
             return;
         }
         if (min == max) {

@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="帮助与关于"
+            android:text="@string/help_and_about"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -71,14 +71,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="@string/intro_cn"
-                        android:textColor="#333" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/intro_en"
+                        android:text="@string/intro"
                         android:textColor="#333" />
                 </LinearLayout>
 
@@ -102,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="开发与支持"
+                        android:text="@string/development_and_support"
                         android:textColor="#A2CAC6"
                         android:textSize="20dp"
                         android:textStyle="bold" />
@@ -135,7 +128,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/about_djzhao_header"
-                            android:text="一碗单炒饭"
+                            android:text="@string/about_author"
                             android:textColor="#686868"
                             android:textSize="20sp" />
 
@@ -144,7 +137,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignBottom="@id/about_djzhao_header"
                             android:layout_toRightOf="@id/about_djzhao_header"
-                            android:text="本程序的开发者"
+                            android:text="@string/developer_this_program"
                             android:textColor="#8c8686"
                             android:textSize="16sp" />
 
@@ -157,7 +150,7 @@
                         android:clickable="true"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="。。。" />
+                        android:text="@string/three_dots" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -181,7 +174,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="反馈与联系"
+                        android:text="@string/feedback_and_contact"
                         android:textColor="#A2CAC6"
                         android:textSize="20dp"
                         android:textStyle="bold" />
@@ -214,7 +207,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_margin="10dp"
-                            android:text="给我发邮件"
+                            android:text="@string/email_me"
                             android:textColor="#515151" />
                     </LinearLayout>
 
@@ -239,7 +232,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_margin="10dp"
-                            android:text="我的主页"
+                            android:text="@string/home_page"
                             android:textColor="#515151" />
                     </LinearLayout>
 
@@ -265,7 +258,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_margin="10dp"
-                            android:text="联系作者"
+                            android:text="@string/contact_author"
                             android:textColor="#515151" />
                     </LinearLayout>
 
@@ -288,7 +281,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="使用的开源项目"
+                        android:text="@string/open_source_project_used"
                         android:textColor="#A2CAC6"
                         android:textSize="20dp"
                         android:textStyle="bold" />

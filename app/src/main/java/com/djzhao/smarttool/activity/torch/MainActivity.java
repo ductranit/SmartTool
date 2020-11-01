@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
 			});*/
 
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
-            Toast.makeText(this, "你的手机没有闪光灯!\n  启用屏幕手电模式!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.your_phone_has_no_flash_enable_screen_flash_mode, Toast.LENGTH_SHORT).show();
             // sreenLight();
             torchBtn.setVisibility(View.INVISIBLE);
             flashlightSwitch.setVisibility(View.INVISIBLE);
@@ -183,7 +183,7 @@ public class MainActivity extends Activity {
         switch (requestCode) {
             case 1:
                 if (grantResults.length == 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(mContext, "程序无法正常运行", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, R.string.the_program_can_not_run_normally, Toast.LENGTH_SHORT).show();
                 }
                 break;
         }

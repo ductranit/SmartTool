@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="选择类别"
+                android:text="@string/select_category"
                 android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
 
@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="结果"
+                android:text="@string/result"
                 android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/google_green"
-                android:text="帮我选"
+                android:text="@string/help_me_choose"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 

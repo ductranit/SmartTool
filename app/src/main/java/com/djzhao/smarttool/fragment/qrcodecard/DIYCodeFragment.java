@@ -68,7 +68,7 @@ public class DIYCodeFragment extends Fragment implements View.OnClickListener {
 
     private void createQRCode() {
         if (TextUtils.isEmpty(contentInput.getText())) {
-            Snackbar.make(contentInput, "内容不可为空", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(contentInput, R.string.content_can_not_be_empty, Snackbar.LENGTH_LONG).show();
             contentInput.requestFocus();
             return;
         }
@@ -122,7 +122,7 @@ public class DIYCodeFragment extends Fragment implements View.OnClickListener {
         shareIntent.setAction(Intent.ACTION_SEND);
         shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
         shareIntent.setType("image/*");
-        getActivity().startActivity(Intent.createChooser(shareIntent, "分享二维码至"));
+        getActivity().startActivity(Intent.createChooser(shareIntent, getString(R.string.share_qrcode_to)));
     }
 
     private void saveQRCode(Bitmap image) {
@@ -138,6 +138,6 @@ public class DIYCodeFragment extends Fragment implements View.OnClickListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Toast.makeText(getContext(), "已经保存至：" + filePath, Toast.LENGTH_LONG).show();
+        Toast.makeText(getContext(), getString(R.string.has_been_saved_to) + filePath, Toast.LENGTH_LONG).show();
     }
 }

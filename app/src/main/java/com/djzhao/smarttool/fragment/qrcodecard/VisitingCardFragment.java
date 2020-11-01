@@ -83,7 +83,7 @@ public class VisitingCardFragment extends Fragment implements View.OnClickListen
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("MECARD:");
         if (TextUtils.isEmpty(nameInput.getText())) {
-            Snackbar.make(nameInput, "名称不可为空", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(nameInput, R.string.name_can_not_be_empty, Snackbar.LENGTH_LONG).show();
             nameInput.requestFocus();
             return;
         }
@@ -94,7 +94,7 @@ public class VisitingCardFragment extends Fragment implements View.OnClickListen
         }
 
         if (TextUtils.isEmpty(phoneInput.getText())) {
-            Snackbar.make(phoneInput, "手机号码不可为空", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(phoneInput, R.string.mobile_phone_can_not_be_empty, Snackbar.LENGTH_LONG).show();
             phoneInput.requestFocus();
             return;
         }
@@ -166,7 +166,7 @@ public class VisitingCardFragment extends Fragment implements View.OnClickListen
         shareIntent.setAction(Intent.ACTION_SEND);
         shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
         shareIntent.setType("image/*");
-        getActivity().startActivity(Intent.createChooser(shareIntent, "分享二维码至"));
+        getActivity().startActivity(Intent.createChooser(shareIntent, getString(R.string.share_qrcode_to)));
     }
 
     private void saveQRCode(Bitmap image) {
@@ -182,7 +182,7 @@ public class VisitingCardFragment extends Fragment implements View.OnClickListen
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Toast.makeText(getContext(), "已经保存至：" + filePath, Toast.LENGTH_LONG).show();
+        Toast.makeText(getContext(), getString(R.string.has_been_saved_to) + filePath, Toast.LENGTH_LONG).show();
     }
 
 

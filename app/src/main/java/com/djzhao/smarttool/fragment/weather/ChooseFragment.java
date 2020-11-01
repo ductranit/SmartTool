@@ -256,7 +256,7 @@ public class ChooseFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(getContext(), "加载失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), R.string.failed_to_load, Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -269,7 +269,7 @@ public class ChooseFragment extends Fragment {
     private void showProgressDialog() {
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(getActivity());
-            progressDialog.setMessage("正在加载...");
+            progressDialog.setMessage(getString(R.string.loading));
             progressDialog.setCanceledOnTouchOutside(false);
         }
         progressDialog.show();

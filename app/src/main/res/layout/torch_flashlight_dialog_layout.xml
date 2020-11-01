@@ -33,7 +33,7 @@
 				android:layout_margin="15dp"
 				android:textSize="16sp"
 				android:textColor="#38adff"
-				android:text="设置频率"/>
+				android:text="@string/set_frequency"/>
 
 			<SeekBar
 				android:id="@+id/flashlight_dialog_layout_seek_bar"
@@ -60,7 +60,7 @@
 					android:layout_height="match_parent"
 					android:layout_marginLeft="5dp"
 					android:background="@null"
-					android:text="取消"
+					android:text="@string/cancel"
 					android:gravity="center"
 					android:layout_weight="1.0"
 					android:textColor="#7d7d7d"
@@ -76,7 +76,7 @@
 					android:layout_width="0dp"
 					android:layout_height="match_parent"
 					android:background="@null"
-					android:text="启动"
+					android:text="@string/start"
 					android:gravity="center"
 					android:layout_weight="1.0"
 					android:textColor="#38adff"

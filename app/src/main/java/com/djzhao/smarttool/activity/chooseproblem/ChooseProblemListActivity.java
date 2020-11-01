@@ -73,9 +73,9 @@ public class ChooseProblemListActivity extends BaseActivity implements View.OnCl
                 @Override
                 public void onItemLongClick(View view, final int position) {
                     new AlertDialog.Builder(mContext)
-                            .setTitle("删除提示")
-                            .setMessage("你确定需要删除:  " + items.get(position).getTitle())
-                            .setPositiveButton("是的，删除", new DialogInterface.OnClickListener() {
+                            .setTitle(R.string.delete_prompt)
+                            .setMessage(getString(R.string.are_you_sure_you_want_to_delete) + items.get(position).getTitle())
+                            .setPositiveButton(R.string.yes_delete, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     DataSupport.deleteAll(ChooseProblemItem.class, "parentId = ?", items.get(position).getId() + "");
@@ -84,7 +84,7 @@ public class ChooseProblemListActivity extends BaseActivity implements View.OnCl
                                     adapter.notifyDataSetChanged();
                                 }
                             })
-                            .setNegativeButton("取消", null)
+                            .setNegativeButton(getString(R.string.cancel), null)
                             .show();
                 }
             });

@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:padding="10dp"
-        android:text="列表中目前没有任何内容，请点击右上角的按钮进行添加。"
+        android:text="@string/no_content_list"
         android:textColor="@color/colorAccent"
         android:textSize="20sp" />
 

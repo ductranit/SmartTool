@@ -38,7 +38,7 @@ public class ShortLinkMainActivity extends BaseActivity implements View.OnClickL
 
     @Override
     protected void initView() {
-        title.setText("短网址生成");
+        title.setText(R.string.short_url_generation);
         backBtn.setOnClickListener(this);
         clearInput.setOnClickListener(this);
         generateBtn.setOnClickListener(this);
@@ -75,16 +75,16 @@ public class ShortLinkMainActivity extends BaseActivity implements View.OnClickL
 
     private void copyResult() {
         ClipboardUtil.copyToClipboard(resultTxt.getText().toString().trim());
-        Snackbar.make(inputTxt, "结果已经复制到剪贴板", Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(inputTxt, R.string.the_result_has_been_copied_to_the_clipboard, Snackbar.LENGTH_SHORT).show();
     }
 
     private void generateLink() {
         String input = inputTxt.getText().toString().trim();
         if (TextUtils.isEmpty(input)) {
-            Snackbar.make(inputTxt, "请先输入网址", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(inputTxt, R.string.please_enter_url_first, Snackbar.LENGTH_LONG).show();
         } else {
             String url = "http://suo.im/api.php?url=" + input;
-            showProgressDialog("生成中，请等待...");
+            showProgressDialog(getString(R.string.generating_please_wait));
             HttpUtil.sendOkHttpRequest(url, new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
@@ -92,7 +92,7 @@ public class ShortLinkMainActivity extends BaseActivity implements View.OnClickL
                         @Override
                         public void run() {
                             closeProgressDialog();
-                            Snackbar.make(inputTxt, "网络异常", Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(inputTxt, R.string.network_abnormaly, Snackbar.LENGTH_LONG).show();
                         }
                     });
                 }

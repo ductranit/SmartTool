@@ -34,7 +34,7 @@ public class GithubAddressMainActivity extends BaseActivity implements View.OnCl
 
     @Override
     protected void initView() {
-        title.setText("Github文件地址解析");
+        title.setText(R.string.github_file_address_resolution);
         backBtn.setOnClickListener(this);
         parseBtn.setOnClickListener(this);
         copyResultBtn.setOnClickListener(this);
@@ -71,7 +71,7 @@ public class GithubAddressMainActivity extends BaseActivity implements View.OnCl
         String result = this.result.getText().toString().trim();
         if (!TextUtils.isEmpty(result)) {
             ClipboardUtil.copyToClipboard(result);
-            Snackbar.make(inputTxt, "结果已经复制到剪贴板", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(inputTxt, R.string.the_result_has_been_copied_to_the_clipboard, Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -80,12 +80,12 @@ public class GithubAddressMainActivity extends BaseActivity implements View.OnCl
         // https://raw.githubusercontent.com/   djzhao627/fitness_Android/master/APP/Fitness/app/build.gradle
         String url = inputTxt.getText().toString().trim();
         if (TextUtils.isEmpty(url)) {
-            Snackbar.make(inputTxt, "请先输入文件地址", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(inputTxt, R.string.please_enter_address_first, Snackbar.LENGTH_LONG).show();
             return;
         }
 
         if (!url.startsWith("https://github.com") && !url.startsWith("http://github.com")) {
-            Snackbar.make(inputTxt, "文件地址不正确", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(inputTxt, R.string.incorrect_file_address, Snackbar.LENGTH_LONG).show();
             return;
         }
         url = url.replace("github.com", "raw.githubusercontent.com");

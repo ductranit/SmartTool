@@ -32,7 +32,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:padding="10dp"
-        android:text="option"
+        android:text="@string/option"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:visibility="gone" />

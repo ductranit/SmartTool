@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:text="你好"
+            android:text="@string/hello_there"
             android:textColor="@color/blue_grey_primary_dark"
             android:textSize="18sp" />
 
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/choose_problem_list_item_text"
-            android:text="长按可以删除此项"
+            android:text="@string/long_press_to_delete_this_item"
             android:textSize="10sp" />
     </RelativeLayout>
 

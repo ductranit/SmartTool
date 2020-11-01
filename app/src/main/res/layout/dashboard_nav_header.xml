@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="djzhao627@gmail.com"
+            android:text="@string/sample_email"
             android:textColor="#fff"
             android:textSize="14sp"
             android:visibility="gone" />
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/nav_intro_en"
             android:layout_marginTop="5dp"
-            android:text="复杂的世界里，工具箱有一个就够了。"
+            android:text="@string/intro"
             android:textColor="#fff"
             android:textSize="12sp" />
 
@@ -48,7 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="@string/intro_en"
+            android:text="@string/intro"
+            android:visibility="invisible"
             android:textColor="#fff"
             android:textSize="12sp" />
 

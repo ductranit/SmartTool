@@ -45,7 +45,14 @@ public class RulerMainActivity extends BaseActivity {
                 .setLineLength((int) (dm.xdpi * 10 / 160))
                 .build();
         DecimalFormat decimalFormat = new DecimalFormat("###.00");
-        textHint.setText("屏幕信息\n宽：" + decimalFormat.format(cmX) + " CM\n高：" + decimalFormat.format(cmY) + " CM");
+        String text = String.format("%s\n %s: %s CM\n %s: %s CM",
+                getString(R.string.screen_infomation),
+                getString(R.string.width),
+                decimalFormat.format(cmX),
+                getString(R.string.height),
+                decimalFormat.format(cmY)
+                );
+        textHint.setText(text);
     }// http://suo.im/api.php?url=
 
     /**

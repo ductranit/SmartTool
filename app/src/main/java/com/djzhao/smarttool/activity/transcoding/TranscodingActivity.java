@@ -36,7 +36,7 @@ public class TranscodingActivity extends BaseActivity implements View.OnClickLis
     @Override
     protected void initView() {
         backBtn.setOnClickListener(this);
-        title.setText("编码/解码");
+        title.setText(R.string.encode_decode);
         initPageViewer();
     }
 

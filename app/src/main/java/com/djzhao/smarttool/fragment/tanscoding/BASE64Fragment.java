@@ -55,7 +55,7 @@ public class BASE64Fragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.fag_base64_deal:
                 if (TextUtils.isEmpty(inputText.getText())) {
-                    Snackbar.make(getView(), "请先输入文本", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(getView(), R.string.please_enter_text_first, Snackbar.LENGTH_SHORT).show();
                 } else {
                     String text = inputText.getText().toString();
                     byte[] bytes;
@@ -66,7 +66,7 @@ public class BASE64Fragment extends Fragment implements View.OnClickListener {
                     }
                     resultText.setText(new String(bytes));
                     ClipboardUtil.copyToClipboard(resultText.getText().toString().trim());
-                    Snackbar.make(getView(), "结果已经复制到剪贴板", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(getView(), R.string.the_result_has_been_copied_to_the_clipboard, Snackbar.LENGTH_LONG).show();
                 }
                 break;
             case R.id.fag_base64_clear:

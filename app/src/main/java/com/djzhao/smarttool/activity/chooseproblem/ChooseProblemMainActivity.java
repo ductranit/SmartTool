@@ -43,8 +43,8 @@ public class ChooseProblemMainActivity extends BaseActivity implements View.OnCl
 
     @Override
     protected void initView() {
-        title.setText("帮我选择");
-        managerBtn.setText("管理");
+        title.setText(R.string.help_me_choose);
+        managerBtn.setText(R.string.management);
         backBtn.setOnClickListener(this);
         managerBtn.setOnClickListener(this);
         managerBtn.setVisibility(View.VISIBLE);
@@ -104,7 +104,7 @@ if (menuList == null || menuList.size() == 0) {
         resultTxt.setText("");
         itemList = DataSupport.where("parentId = ?", selectedItem.getId() + "").find(ChooseProblemItem.class);
         if (itemList.size() == 0) {
-            Snackbar.make(chooseBtn, "该类别下面没有内容，请添加内容", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(chooseBtn, R.string.no_category_content, Snackbar.LENGTH_LONG).show();
         } else {
             Random random = new Random();
             int index = random.nextInt(itemList.size());

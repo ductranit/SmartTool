@@ -17,7 +17,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_margin="20dp"
-			android:text="开启闪光"
+			android:text="@string/flash_on"
 			/>
 		
 	</LinearLayout>
@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="前置闪光灯"
+            android:text="@string/front_flash"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="10dp"
-            android:text="关于我们"
+            android:text="@string/about_us"
             android:textColor="#fb833c"
             android:textSize="14sp" />
     </LinearLayout>

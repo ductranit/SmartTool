@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="结果："
+                    android:text="@string/result_dots"
                     android:textColor="@color/colorAccent" />
 
                 <TextView
@@ -61,7 +61,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="最小整数"
+                            android:text="@string/smallest_integer"
                             android:textColor="@color/colorAccent" />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -90,7 +90,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="最大整数"
+                            android:text="@string/maximum_integer"
                             android:textColor="@color/colorAccent" />
 
                         <com.google.android.material.textfield.TextInputLayout

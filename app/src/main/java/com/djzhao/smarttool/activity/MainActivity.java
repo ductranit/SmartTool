@@ -85,20 +85,7 @@ public class MainActivity extends BaseActivity {
     };
 
     //定义图标下方的名称数组
-    private String[] names = {
-            "天气",
-            "手电筒",
-            "编码/解码",
-            "摩斯码",
-            "直尺",
-            "短网址生成",
-            "网页源码获取",
-            "随机数生成",
-            "进制转换",
-            "名片/二维码",
-            "GitHub地址解析",
-            "选择困难症"
-    };
+    private String[] names;
 
     @Override
     protected void findViewById() {
@@ -114,7 +101,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        dailyWord.setText("每一日你所付出的代价都比前一日高，因为你的生命又消短了一天，所以每一日你都要更用心。");
+        dailyWord.setText(R.string.daily_word_hint);
         // dailyWordAuthor.setText(" —— ONE一个");
 
         gridViewEvent();
@@ -239,6 +226,21 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        names = new String[]{
+                getString(R.string.weather),
+                getString(R.string.flash_light),
+                getString(R.string.encode_decode),
+                getString(R.string.morse_code),
+                getString(R.string.ruler),
+                getString(R.string.short_url_generation),
+                getString(R.string.get_web_source_code),
+                getString(R.string.random_number_generation),
+                getString(R.string.base_conversion),
+                getString(R.string.business_card_qr_code),
+                getString(R.string.github_file_address_resolution),
+                getString(R.string.difficulty_in_choice)
+        };
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
@@ -332,9 +334,9 @@ public class MainActivity extends BaseActivity {
             if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
-            Snackbar snackbar = Snackbar.make(gridView, "您确定需要退出吗？", Snackbar.LENGTH_LONG)
+            Snackbar snackbar = Snackbar.make(gridView, R.string.are_you_sure_to_exit, Snackbar.LENGTH_LONG)
 
-                    .setAction("确定", new View.OnClickListener() {
+                    .setAction(R.string.yes, new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             AppManager.getInstance().AppExit(mContext);

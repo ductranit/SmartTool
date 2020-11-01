@@ -33,7 +33,7 @@
                         android:id="@+id/radix_input_txt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="输入需要转换的数据"
+                        android:hint="@string/enter_data_to_be_converted"
                         android:singleLine="true"
                         android:textColor="@color/blue_primary" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -55,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:text="转换为"
+                        android:text="@string/convert_to"
                         android:textColor="@color/colorAccent" />
 
                     <Spinner
@@ -69,7 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="结果："
+                    android:text="@string/result_dots"
                     android:textColor="@color/colorAccent" />
 
                 <TextView
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="转换"
+                    android:text="@string/conversion"
                     android:textColor="@color/colorPrimaryDark" />
 
             </LinearLayout>

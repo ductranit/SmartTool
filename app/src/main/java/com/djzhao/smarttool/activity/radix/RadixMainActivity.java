@@ -34,7 +34,7 @@ public class RadixMainActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     protected void initView() {
-        title.setText("进制转换");
+        title.setText(R.string.base_conversion);
         backBtn.setOnClickListener(this);
         convertBtn.setOnClickListener(this);
     }
@@ -58,7 +58,7 @@ public class RadixMainActivity extends BaseActivity implements View.OnClickListe
                 try {
                     convert();
                 } catch (Exception e) {
-                    Snackbar.make(inputTxt, "数据异常，无法解析", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(inputTxt, R.string.the_data_is_abnormal_and_can_not_be_parsed, Snackbar.LENGTH_LONG).show();
                 }
                 break;
         }
@@ -66,7 +66,7 @@ public class RadixMainActivity extends BaseActivity implements View.OnClickListe
 
     private void convert() {
         if (!isLegal()) {
-            Snackbar.make(inputTxt, "输入不合法", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(inputTxt, R.string.illegal_input, Snackbar.LENGTH_LONG).show();
             return;
         }
         String s = inputTxt.getText().toString().trim();

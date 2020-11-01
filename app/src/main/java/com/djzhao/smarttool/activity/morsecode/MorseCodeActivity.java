@@ -41,7 +41,7 @@ public class MorseCodeActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     protected void initView() {
-        title.setText("摩斯码");
+        title.setText(R.string.morse_code);
         backBtn.setOnClickListener(this);
         decodeBtn.setOnClickListener(this);
         encodeBtn.setOnClickListener(this);
