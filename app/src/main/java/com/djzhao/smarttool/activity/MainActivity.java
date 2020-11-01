@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import androidx.annotation.NonNull;
+
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.core.view.GravityCompat;
@@ -256,6 +260,12 @@ public class MainActivity extends BaseActivity {
         }
         setContentView(R.layout.activity_dashboard);
 
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
         findViewById();
         initView();
     }
@@ -327,24 +337,24 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                drawerLayout.closeDrawer(GravityCompat.START);
-            }
-            Snackbar snackbar = Snackbar.make(gridView, R.string.are_you_sure_to_exit, Snackbar.LENGTH_LONG)
-
-                    .setAction(R.string.yes, new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            AppManager.getInstance().AppExit(mContext);
-                        }
-                    });
-            snackbar.getView().setBackgroundColor(Color.parseColor("#FB5D73ED"));
-            snackbar.show();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+//                drawerLayout.closeDrawer(GravityCompat.START);
+//            }
+//            Snackbar snackbar = Snackbar.make(gridView, R.string.are_you_sure_to_exit, Snackbar.LENGTH_LONG)
+//
+//                    .setAction(R.string.yes, new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            AppManager.getInstance().AppExit(mContext);
+//                        }
+//                    });
+//            snackbar.getView().setBackgroundColor(Color.parseColor("#FB5D73ED"));
+//            snackbar.show();
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 }
