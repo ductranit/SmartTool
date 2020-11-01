@@ -43,8 +43,8 @@ public class ChooseProblemListActivity extends BaseActivity implements View.OnCl
         backBtn.setOnClickListener(this);
         addBtn.setOnClickListener(this);
         addBtn.setVisibility(View.VISIBLE);
-        addBtn.setText("添加");
-        title.setText("管理");
+        addBtn.setText(R.string.add_to);
+        title.setText(R.string.management);
     }
 
     @Override

@@ -43,7 +43,7 @@ public class ChooseProblemDetailListActivity extends BaseActivity implements Vie
         backBtn.setOnClickListener(this);
         addBtn.setOnClickListener(this);
         addBtn.setVisibility(View.VISIBLE);
-        addBtn.setText("添加");
+        addBtn.setText(R.string.add_to);
 
         Intent intent = getIntent();
         parentId = intent.getIntExtra("parentId", 0);
@@ -72,9 +72,9 @@ public class ChooseProblemDetailListActivity extends BaseActivity implements Vie
                 @Override
                 public void onItemLongClick(View view, final int position) {
                     new AlertDialog.Builder(mContext)
-                            .setTitle("删除提示")
-                            .setMessage("你确定需要删除:  " + items.get(position).getTitle())
-                            .setPositiveButton("是的，删除", new DialogInterface.OnClickListener() {
+                            .setTitle(R.string.delete_prompt)
+                            .setMessage(getString(R.string.are_you_sure_you_want_to_delete) + items.get(position).getTitle())
+                            .setPositiveButton(getString(R.string.yes_delete), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     DataSupport.delete(ChooseProblemItem.class, items.get(position).getId());
@@ -82,7 +82,7 @@ public class ChooseProblemDetailListActivity extends BaseActivity implements Vie
                                     adapter.notifyDataSetChanged();
                                 }
                             })
-                            .setNegativeButton("取消", null)
+                            .setNegativeButton(R.string.cancel, null)
                             .show();
                 }
             });
